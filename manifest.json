@@ -1,0 +1,37 @@
+{
+    "name": "Weekly Report Template",
+    "description" : "Weekly Report ChatWork Template for all employee",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+    },
+	"content_scripts": [{
+		"matches": ["https://www.chatwork.com/*"],
+		"js": ["js/jquery.min.js", "js/script.js"]
+	}],
+	"icons": {
+      "16": "icons/16.png"
+      //"48": "icons/48.png",
+      //"128": "icons/128.png"
+	},
+    "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+        "description": "Insert Weekly Report ChatWork Template for Message Area"
+      }
+    },
+    "background": {
+      "scripts" : [
+        "js/background.js"
+      ]
+    },
+    //"options_page": "html/options.html",
+    "permissions": [
+      "storage"
+    ]
+}
+
+
